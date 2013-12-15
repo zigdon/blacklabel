@@ -304,11 +304,9 @@ Meteor.methods({
 Accounts.onCreateUser(function (options, user) {
   var invitedBy = Meteor.users.findOne({
     invitationCode: options.invitationCode });
-
-  if (! invitedBy)
-    throw new Meteor.Error("access-denied", "Whoever informed you about " +
-                           "this service, didn't inform you enough");
+  if (! invitedBy && Meteor.users.findOne()) // the first user do not check
+    return null;
   user.profile = options.profile || {};
-  user.profile.invitedBy = invitedBy._id;
+  user.profile.invitedBy = invitedBy ? invitedBy : "nobody";
   return user;
 });
