@@ -4,7 +4,7 @@ Meteor.startup(function () {
   });
   Accounts.loginServiceConfiguration.insert({
     service: "dropbox",
-    clientId: "p4ixruo4go46xtq",
-    secret: "48mryu16hpg63n5"
+    clientId: "changeme",
+    secret: "s3kr1t"
   });
 });
