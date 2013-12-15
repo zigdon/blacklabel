@@ -53,7 +53,7 @@ _.extend(Scanner.prototype, {
           }).data;
       } catch (err) {
         console.log("#" + dropbox.uid + " failed to fetch URL for scanning " +
-                    song.path + ": " + err.message);
+                    file.path + ": " + err.message);
         continue;
       }
 
