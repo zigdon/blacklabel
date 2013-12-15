@@ -1,1 +1,6 @@
-{"dropboxClientId": "changeme", "dropboxSecret": "s3kr1t"}
+{
+  "dropboxClientId": "changeme",
+  "dropboxSecret": "s3kr1t",
+  "firstUser": "me",
+  "firstPassword": "myPassword"
+}
